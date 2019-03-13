@@ -1,5 +1,5 @@
-language: swift
+language: objective-c
+osx_image: xcode10.1
 xcode_project: TestingTravis.xcodeproj
-platform: macos
-xcode_destination:platform=iOS Simulator, OS = 12.1, name=iPhone XR
-os: osx
+xcode_scheme: TestingTravis
+xcode_sdk: iphonesimulator8.4 
