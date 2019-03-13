@@ -1,5 +1,10 @@
+podfile: podfile
 language: objective-c
 osx_image: xcode10.1
 xcode_project: TestingTravis.xcodeproj
 xcode_scheme: TestingTravis
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XR
+before_install:
+- gem install fastlane --no-ri --no-doc --no-document
+- gem install danger --no-ri --no-doc --no-document
+- gem install danger-swxftlint --no-ri --no-rdoc --no-document
