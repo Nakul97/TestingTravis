@@ -10,11 +10,11 @@ before_script:
 - gem install danger --no-ri --no-doc --no-document
 - gem install danger-swiftlint --no-ri --no-rdoc --no-document
 
-before_install:
-- brew tap oclint/formulae
-- brew install oclint
+#before_install:
+#- brew tap oclint/formulae
+#- brew install oclint
 
-script:
-  - xcodebuild | tee xcodebuild.log
-  - oclint-xcodebuild
-  - oclint-json-compilation-database
+#script:
+ # - xcodebuild | tee xcodebuild.log
+  #- oclint-xcodebuild
+  #- oclint-json-compilation-database
