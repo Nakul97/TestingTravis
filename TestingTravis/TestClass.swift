@@ -16,6 +16,8 @@ class TestClass: NSObject {
     override init() {
         print(forceUnwrapMe!)
         print(forceUnwrap2!)
+        
+        let unused = 0
     }
     
 }
