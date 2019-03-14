@@ -11,9 +11,11 @@ import Foundation
 class TestClass: NSObject {
     
     var forceUnwrapMe: String?
+    var forceUnwrap2: Int?
     
     override init() {
         print(forceUnwrapMe!)
+        print(forceUnwrap2!)
     }
     
 }
