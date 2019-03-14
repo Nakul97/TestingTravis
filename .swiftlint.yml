@@ -3,3 +3,6 @@ opt_in_rules:
 
 disabled_rules:
 - line_length
+
+force_unwrapping: 
+- severity: error
