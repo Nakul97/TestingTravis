@@ -1,8 +1,5 @@
 podfile: podfile
 language: objective-c
-cache: 
-- bundler
-- cocoapods
 osx_image: xcode10.1
 xcode_project: TestingTravis.xcodeproj
 xcode_scheme: TestingTravis
@@ -11,7 +8,6 @@ before_install:
 - gem install fastlane --no-ri --no-doc --no-document
 - gem install danger --no-ri --no-doc --no-document
 - gem install danger-swiftlint --no-ri --no-rdoc --no-document
-- if [ $DANGER == "ALLOW" ]; then
-         danger;
-         ./Pods/SwiftLint/swiftlint lint --config .swiftlint-ci.yml;
-     fi
+- danger;
+  ./Pods/SwiftLint/swiftlint lint --config .swiftlint-ci.yml;
+
