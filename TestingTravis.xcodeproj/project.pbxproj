@@ -161,7 +161,6 @@
 				C5AC33E4223926A3007E5ED6 /* Sources */,
 				C5AC33E5223926A3007E5ED6 /* Frameworks */,
 				C5AC33E6223926A3007E5ED6 /* Resources */,
-				C5AC33F2223A4155007E5ED6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -232,23 +231,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C5AC33F2223A4155007E5ED6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
 		C5AC33F6223A6A7B007E5ED6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
