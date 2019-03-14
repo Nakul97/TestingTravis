@@ -12,3 +12,13 @@ before_script:
 - danger;
   ./Pods/SwiftLint/swiftlint lint --config .swiftlint.yml;
 - bundle exec danger
+
+before_install:
+- brew cask uninstall oclint
+- brew tap oclint/formulae
+- brew install oclint
+
+script:
+  - xcodebuild | tee xcodebuild.log
+  - oclint-xcodebuild
+  - oclint-json-compilation-database
