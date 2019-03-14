@@ -15,6 +15,9 @@ before_script:
 #- brew tap oclint/formulae
 #- brew install oclint
 
+script:
+- set -o pipefail && xcodebuild -workspace TestingTravis.xcworkspace -scheme TestingTravis -destination platform\=iOS\ Simulator,OS\=12.1,name\=iPhone\ X build test
+
 #script:
  # - xcodebuild | tee xcodebuild.log
   #- oclint-xcodebuild
