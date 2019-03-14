@@ -11,6 +11,7 @@ before_script:
 - gem install danger-swiftlint --no-ri --no-rdoc --no-document
 - danger;
   ./Pods/SwiftLint/swiftlint lint --config .swiftlint.yml;
+- bundle exec danger
 
 before_install:
 - brew tap oclint/formulae
