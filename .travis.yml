@@ -1,5 +1,8 @@
 podfile: podfile
 language: objective-c
+cache: 
+- bundler
+- cocoapods
 osx_image: xcode10.1
 xcode_project: TestingTravis.xcodeproj
 xcode_scheme: TestingTravis
