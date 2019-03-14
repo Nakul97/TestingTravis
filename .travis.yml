@@ -9,6 +9,8 @@ before_script:
 - gem install fastlane --no-ri --no-doc --no-document
 - gem install danger --no-ri --no-doc --no-document
 - gem install danger-swiftlint --no-ri --no-rdoc --no-document
+- danger;
+  ./Pods/SwiftLint/swiftlint lint --config .swiftlint.yml;
 
 #before_install:
 #- brew tap oclint/formulae
@@ -18,7 +20,3 @@ before_script:
  # - xcodebuild | tee xcodebuild.log
   #- oclint-xcodebuild
   #- oclint-json-compilation-database
-
-after_install:
-- danger;
-  ./Pods/SwiftLint/swiftlint lint --config .swiftlint.yml;
