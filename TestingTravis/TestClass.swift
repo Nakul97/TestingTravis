@@ -8,7 +8,7 @@
 
 import Foundation
 
-class testClass: NSObject {
+class TestClass: NSObject {
     
     override init() {
         

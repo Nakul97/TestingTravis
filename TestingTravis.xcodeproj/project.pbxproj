@@ -14,7 +14,7 @@
 		C5AC33DA22391068007E5ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5AC33D922391068007E5ED6 /* Assets.xcassets */; };
 		C5AC33DD22391068007E5ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AC33DB22391068007E5ED6 /* LaunchScreen.storyboard */; };
 		C5AC33EB223926A3007E5ED6 /* TestingTravisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC33EA223926A3007E5ED6 /* TestingTravisTests.swift */; };
-		C5AC33F5223A5F53007E5ED6 /* testClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC33F4223A5F53007E5ED6 /* testClass.swift */; };
+		C5AC33F5223A5F53007E5ED6 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC33F4223A5F53007E5ED6 /* TestClass.swift */; };
 		FBCF8C13E98C0CAB6FB95C78 /* Pods_TestingTravis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35D3E16EE8CEB49D282C89C /* Pods_TestingTravis.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		C5AC33E8223926A3007E5ED6 /* TestingTravisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingTravisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AC33EA223926A3007E5ED6 /* TestingTravisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTravisTests.swift; sourceTree = "<group>"; };
 		C5AC33EC223926A3007E5ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5AC33F4223A5F53007E5ED6 /* testClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testClass.swift; sourceTree = "<group>"; };
+		C5AC33F4223A5F53007E5ED6 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		D35D3E16EE8CEB49D282C89C /* Pods_TestingTravis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingTravis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE32931B482F9CDD6A8780AB /* Pods-TestingTravis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingTravis.release.xcconfig"; path = "Target Support Files/Pods-TestingTravis/Pods-TestingTravis.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +104,7 @@
 			children = (
 				C5AC33D222391067007E5ED6 /* AppDelegate.swift */,
 				C5AC33D422391067007E5ED6 /* ViewController.swift */,
-				C5AC33F4223A5F53007E5ED6 /* testClass.swift */,
+				C5AC33F4223A5F53007E5ED6 /* TestClass.swift */,
 				C5AC33D622391067007E5ED6 /* Main.storyboard */,
 				C5AC33D922391068007E5ED6 /* Assets.xcassets */,
 				C5AC33DB22391068007E5ED6 /* LaunchScreen.storyboard */,
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5AC33D522391067007E5ED6 /* ViewController.swift in Sources */,
-				C5AC33F5223A5F53007E5ED6 /* testClass.swift in Sources */,
+				C5AC33F5223A5F53007E5ED6 /* TestClass.swift in Sources */,
 				C5AC33D322391067007E5ED6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
