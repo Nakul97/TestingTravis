@@ -10,8 +10,10 @@ import Foundation
 
 class TestClass: NSObject {
     
+    var forceUnwrapMe: String?
+    
     override init() {
-        
+        print(forceUnwrapMe!)
     }
     
 }
