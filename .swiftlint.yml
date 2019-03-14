@@ -1,7 +1,7 @@
+force_unwrapping: error
+
 opt_in_rules:
 - force_unwrapping
 
 disabled_rules:
 - line_length
-
-force_unwrapping: error
