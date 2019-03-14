@@ -14,7 +14,6 @@ before_script:
 - bundle exec danger
 
 before_install:
-- brew cask uninstall oclint
 - brew tap oclint/formulae
 - brew install oclint
 
