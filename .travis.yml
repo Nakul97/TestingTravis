@@ -19,6 +19,6 @@ before_script:
   #- oclint-xcodebuild
   #- oclint-json-compilation-database
 
-#after_install:
-#- danger;
-#  ./Pods/SwiftLint/swiftlint lint --config .swiftlint.yml;
+after_install:
+- danger;
+  ./Pods/SwiftLint/swiftlint lint --config .swiftlint.yml;
