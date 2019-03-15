@@ -18,7 +18,7 @@ before_script:
 #- brew install oclint
 
 script:
-- set -o pipefail && xcodebuild -workspace TestingTravis.xcworkspace -scheme TestingTravis -destination platform\=iOS\ Simulator,OS\=12.1,name\=iPhone\ X build test | xcpretty -f `xcpretty-json-formatter`
+- set -o pipefail && xcodebuild -workspace TestingTravis.xcworkspace -scheme TestingTravis -destination platform\=iOS\ Simulator,OS\=12.1,name\=iPhone\ X build test | XCPRETTY_JSON_FILE_OUTPUT=xcodebuild.json xcpretty -f `xcpretty-json-formatter`
 - danger;
 
 #script:
