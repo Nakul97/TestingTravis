@@ -1,3 +1,5 @@
+xcode_summary.report 'xcodebuild.json'
+
 #warn if the Podfile was changed
 warn "#{github.html_link("Podfile”)} was edited, external dependencies might have been added." if git.modified_files.include? “Podfile”
 

@@ -10,6 +10,7 @@ before_script:
 - gem install danger --no-ri --no-doc --no-document
 - gem install danger-swiftlint --no-ri --no-rdoc --no-document
 - gem install xcpretty-travis-formatter
+- gem install danger-code_summary
 - danger;
 
 #before_install:
@@ -18,6 +19,7 @@ before_script:
 
 script:
 - set -o pipefail && xcodebuild -workspace TestingTravis.xcworkspace -scheme TestingTravis -destination platform\=iOS\ Simulator,OS\=12.1,name\=iPhone\ X build test | xcpretty -f `xcpretty-travis-formatter`
+- danger;
 
 #script:
  # - xcodebuild | tee xcodebuild.log
