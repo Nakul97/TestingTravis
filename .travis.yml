@@ -10,7 +10,7 @@ before_script:
 - gem install danger --no-ri --no-doc --no-document
 - gem install danger-swiftlint --no-ri --no-rdoc --no-document
 - gem install xcpretty-travis-formatter
-- gem install danger-code_summary
+- gem install danger-xcode_summary
 - danger;
 
 #before_install:
