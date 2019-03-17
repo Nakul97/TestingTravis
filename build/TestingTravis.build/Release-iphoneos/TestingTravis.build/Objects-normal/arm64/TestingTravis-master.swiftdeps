@@ -1,8 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "ad751837f5056a984f1dce4c7fe15d8f"
-build_time: [1552812637, 472050000]
-inputs:
-  "/Users/zomato/Desktop/TestingTravis/TestingTravis/ViewController.swift": [9223372036, 854775807]
-  "/Users/zomato/Desktop/TestingTravis/TestingTravis/TestClass.swift": [9223372036, 854775807]
-  "/Users/zomato/Desktop/TestingTravis/TestingTravis/AppDelegate.swift": [9223372036, 854775807]
-  "/Users/zomato/Desktop/TestingTravis/TestingTravis/TestClass2.swift": [9223372036, 854775807]
