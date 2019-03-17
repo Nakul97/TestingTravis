@@ -1,6 +1,3 @@
-#turn on the inline mode so that the warnings/errors are commented on the line which has issues.
-xcode_summary.inline_mode = true
-
 #In our ignored_results block we return 'false' for the files that have been modified or added, ignoring rest of the files.
 xcode_summary.ignored_results { |result| 
 	#return false if the warning is not location specific
@@ -20,6 +17,9 @@ def isResultInFilesArray(filesArray, result)
 	}
 	return false
 end
+
+#turn on the inline mode so that the warnings/errors are commented on the line which has issues.
+xcode_summary.inline_mode = true
 
 #Finally, we parse through all the warnings. 
 #Make sure that xcode-json-formatter is being used while executing xcodebuild in travis.yml, otherwise the below line will return an error -- "Summary File not found"
