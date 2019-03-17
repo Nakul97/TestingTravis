@@ -1,14 +1,27 @@
-require 'active_support'
-require 'active_support/core_ext/enumerable'
-
+#turn on the inline mode so that the warnings/errors are commented on the line which has issues.
 xcode_summary.inline_mode = true
 
+#In our ignored_results block we return 'false' for the files that have been modified or added, ignoring rest of the files.
 xcode_summary.ignored_results { |result| 
-	if result.location
-		git.added_files.exclude?("*/#{result.location.file_name}") && git.modified_files.exclude?("*/#{result.location.file_name}")
-	else 
+	#return false if the warning is not location specific
+	if !result.location
 		false
+		next
 	end
+	!(isResultInFilesArray(git.added_files, result) || isResultInFilesArray(git.modified_files, result))
 }
 
-xcode_summary.report 'xcodebuild.json'
+#Will check if a file is present in any give narray of files.
+def isResultInFilesArray(filesArray, result)
+	filesArray.each{ |file| 
+		if File.basename(file) == result.location.file_name
+			return true
+		end
+	}
+	return false
+end
+
+#Finally, we parse through all the warnings. 
+#Make sure that xcode-json-formatter is being used while executing xcodebuild in travis.yml, otherwise the below line will return an error -- "Summary File not found"
+xcode_summary.report 'xcodebuild.json' 
+     
