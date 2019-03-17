@@ -1,0 +1,45 @@
+{
+  "warnings": [
+
+  ],
+  "ld_warnings": [
+
+  ],
+  "compile_warnings": [
+    {
+      "file_name": "TestClass.swift",
+      "file_path": "/Users/zomato/Desktop/TestingTravis/TestingTravis/TestClass.swift:21:13",
+      "reason": "initialization of immutable value 'unused' was never used; consider replacing with assignment to '_' or removing it",
+      "line": "        let unused = 0",
+      "cursor": "        ~~~~^~~~~~"
+    },
+    {
+      "file_name": "TestClass2.swift",
+      "file_path": "/Users/zomato/Desktop/TestingTravis/TestingTravis/TestClass2.swift:14:13",
+      "reason": "initialization of immutable value 'unusedVar2' was never used; consider replacing with assignment to '_' or removing it",
+      "line": "        let unusedVar2 = 0",
+      "cursor": "        ~~~~^~~~~~~~~~"
+    }
+  ],
+  "errors": [
+    "ld: framework not found Pods_TestingTravis",
+    "clang: error: linker command failed with exit code 1 (use -v to see invocation)"
+  ],
+  "compile_errors": [
+
+  ],
+  "file_missing_errors": [
+
+  ],
+  "undefined_symbols_errors": [
+
+  ],
+  "duplicate_symbols_errors": [
+
+  ],
+  "tests_failures": {
+  },
+  "tests_summary_messages": [
+
+  ]
+}

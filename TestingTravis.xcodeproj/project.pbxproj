@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5AD3795DD1D829DCB63DB8AB /* Pods_TestingTravisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68F5113F7D68496AAD201D /* Pods_TestingTravisTests.framework */; };
+		C5008203223E150C00B45760 /* TestClass2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5008202223E150C00B45760 /* TestClass2.swift */; };
 		C5AC33D322391067007E5ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC33D222391067007E5ED6 /* AppDelegate.swift */; };
 		C5AC33D522391067007E5ED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC33D422391067007E5ED6 /* ViewController.swift */; };
 		C5AC33D822391067007E5ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AC33D622391067007E5ED6 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		1A68F5113F7D68496AAD201D /* Pods_TestingTravisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingTravisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E25E54384B5E1236CE0D65B /* Pods-TestingTravisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingTravisTests.release.xcconfig"; path = "Target Support Files/Pods-TestingTravisTests/Pods-TestingTravisTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEFF330E041E3E2BB5985A6E /* Pods-TestingTravis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingTravis.debug.xcconfig"; path = "Target Support Files/Pods-TestingTravis/Pods-TestingTravis.debug.xcconfig"; sourceTree = "<group>"; };
+		C5008202223E150C00B45760 /* TestClass2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass2.swift; sourceTree = "<group>"; };
 		C5AC33CF22391067007E5ED6 /* TestingTravis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingTravis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AC33D222391067007E5ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5AC33D422391067007E5ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C5AC33D222391067007E5ED6 /* AppDelegate.swift */,
 				C5AC33D422391067007E5ED6 /* ViewController.swift */,
 				C5AC33F4223A5F53007E5ED6 /* TestClass.swift */,
+				C5008202223E150C00B45760 /* TestClass2.swift */,
 				C5AC33D622391067007E5ED6 /* Main.storyboard */,
 				C5AC33D922391068007E5ED6 /* Assets.xcassets */,
 				C5AC33DB22391068007E5ED6 /* LaunchScreen.storyboard */,
@@ -302,6 +305,7 @@
 				C5AC33D522391067007E5ED6 /* ViewController.swift in Sources */,
 				C5AC33F5223A5F53007E5ED6 /* TestClass.swift in Sources */,
 				C5AC33D322391067007E5ED6 /* AppDelegate.swift in Sources */,
+				C5008203223E150C00B45760 /* TestClass2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B37BDH8ZN7;
 				INFOPLIST_FILE = TestingTravis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B37BDH8ZN7;
 				INFOPLIST_FILE = TestingTravis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
