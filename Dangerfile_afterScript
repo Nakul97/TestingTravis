@@ -1,7 +1,7 @@
 xcode_summary.inline_mode = true
 
 xcode_summary.ignored_results { |result| 
-	result.location && git.modified_files.exclude? result.location.file_name 
+	result.location && git.modified_files.exclude?(result.location.file_name) 
 }
 
 xcode_summary.report 'xcodebuild.json'
