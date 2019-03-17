@@ -1,0 +1,1 @@
+warn "iPA Size after this PR is merged will be -- #{File.size?("xcodebuild.json")}"
