@@ -5,7 +5,7 @@ xcode_summary.inline_mode = true
 
 xcode_summary.ignored_results { |result| 
 	if result.location
-		git.added_files.exclude?(result.location.file_path)
+		git.added_files.exclude?(result.location.file_path) && git.modified_files.exclude?(result.location.file_path)
 	else 
 		false
 	end
