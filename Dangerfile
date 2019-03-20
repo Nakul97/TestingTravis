@@ -1,5 +1,7 @@
 require 'json'
 
+puts("here")
+
 def getStartIndexforFile(file, diff)
   pattern = "+++ b/" + file + "\n"
   puts(diff.index(pattern))
@@ -15,38 +17,48 @@ def getStartIndexforFile(file, diff)
 end
 
 def checkDataModelIdentifier(file, diff)
+  values = {"hasPassed" => false, "lineNumber" => nil, "shouldBe" => nil} 
   file_start = getStartIndexforFile file, diff
   extension = 'xcdatamodel/'
   fileLine = file.scan(/[0-9]*\.#{extension}/)
+
   if fileLine.count == 0 
-    return true
+    values["hasPassed"] = true
+    return values
   end
+
   fileIdentiferArray = fileLine[0].scan(/[0-9]/)
-  puts("yo #{fileLine}")
   fileIdentifer = 0
+
   if fileIdentiferArray.count != 0
     fileIdentifer = fileIdentiferArray[0]
   end
-  isTheVersionSame = false
+
+  values["shouldBe"] = fileIdentifer
+
+  changesLine = diff[file_start] 
+  changedLinesString = changesLine.scan(/\+[0-9]*,[0-9]*\s/)[0].scan(/[0-9]+/)
+  currentLine = changedLinesString[0].to_i - 1
+
   diff.drop(file_start).each do |line|
+    currentLine += 1
     key = 'userDefinedModelVersionIdentifier'
     identiferLine = line.scan(/#{key}="[0-9]*"/)
+
     if identiferLine.count != 0
       identifier = identiferLine[0].scan(/[0-9]+/)
-      puts(fileIdentifer)
-      if identifier.count == 0 && fileIdentifer == 0
-        isTheVersionSame = true
-        break
-      end
+
       if identifier == fileIdentifer
-        isTheVersionSame = true
+        values["hasPassed"] = true
         break
+      else
+        values["lineNumber"] = currentLine
       end
       break
     end 
   end
 
-  return isTheVersionSame
+  return values
 end
 
 puts(git.modified_files)
@@ -59,10 +71,11 @@ changedFiles = git.added_files + git.modified_files - git.deleted_files
 
 changedFiles.each { |file|
   if file.index(".xcdatamodel")
-    if !checkDataModelIdentifier file, github.pr_diff.lines
+    values = checkDataModelIdentifier(file, github.pr_diff.lines)
+    if !values["hasPassed"]
       puts("\n***********")
       puts("error in #{file}")
-      puts("*******\n")
+      puts("*******\n should be :#{values["shouldBe"]} at line #{values["lineNumber"]}")
     end
   end
 }
