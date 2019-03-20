@@ -38,6 +38,7 @@
 		C5008202223E150C00B45760 /* TestClass2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass2.swift; sourceTree = "<group>"; };
 		C577EB29224118EF006AD8E1 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
 		C577EB4422411B70006AD8E1 /* TestModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TestModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		C577EB4822420342006AD8E1 /* TestModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TestModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		C5AC33CF22391067007E5ED6 /* TestingTravis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingTravis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AC33D222391067007E5ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5AC33D422391067007E5ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -582,6 +583,7 @@
 		C577EB28224118EF006AD8E1 /* TestModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				C577EB4822420342006AD8E1 /* TestModel 3.xcdatamodel */,
 				C577EB4422411B70006AD8E1 /* TestModel 2.xcdatamodel */,
 				C577EB29224118EF006AD8E1 /* TestModel.xcdatamodel */,
 			);

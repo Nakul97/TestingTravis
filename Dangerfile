@@ -1,27 +1,84 @@
 require 'json'
 
+def getStartIndexforFile(file, diff)
+  pattern = "+++ b/" + file + "\n"
+  puts(diff.index(pattern))
+  file_start = diff.index(pattern)
+
+  # Files containing spaces sometimes have a trailing tab
+  pattern2 = "+++ b/" + file + "\t\n"
+  if file_start.nil?
+    file_start = diff.index(pattern2)
+  end
+
+  return file_start + 1
+end
+
+def checkDataModelIdentifier(file, diff)
+  file_start = getStartIndexforFile file, diff
+  extension = 'xcdatamodel/'
+  fileLine = file.scan(/[0-9]*\.#{extension}/)
+  if fileLine.count == 0 
+    return true
+  end
+  fileIdentiferArray = fileLine[0].scan(/[0-9]/)
+  puts("yo #{fileLine}")
+  fileIdentifer = 0
+  if fileIdentiferArray.count != 0
+    fileIdentifer = fileIdentiferArray[0]
+  end
+  isTheVersionSame = false
+  diff.drop(file_start).each do |line|
+    key = 'userDefinedModelVersionIdentifier'
+    identiferLine = line.scan(/#{key}="[0-9]*"/)
+    if identiferLine.count != 0
+      identifier = identiferLine[0].scan(/[0-9]+/)
+      puts(fileIdentifer)
+      if identifier.count == 0 && fileIdentifer == 0
+        isTheVersionSame = true
+        break
+      end
+      if identifier == fileIdentifer
+        isTheVersionSame = true
+        break
+      end
+      break
+    end 
+  end
+
+  return isTheVersionSame
+end
+
 puts(git.modified_files)
 puts(git.added_files)
 #puts(github.pr_diff.lines)
 #puts(find_position_in_diff github.pr_diff.lines, 
 puts(github.pr_diff.lines)
 
+changedFiles = git.added_files + git.modified_files - git.deleted_files
+
+changedFiles.each { |file|
+  if file.index(".xcdatamodel")
+    if !checkDataModelIdentifier file, github.pr_diff.lines
+      puts("\n***********")
+      puts("error in #{file}")
+      puts("*******\n")
+    end
+  end
+}
+
+# changedFiles.each { |file|
+#   if File.extname(file) == ".m" || File.extname(file) == ".h"
+#     file_start = getStartIndexforFile
+
+#   end
+# }
 
 def findLineOfDiffInFile(file, diff)
   # pattern = /\+{3} b{1}\/#{file}\s*\n{1}/
-  pattern = "+++ b/" + file + "\n"
-  file_start = diff.index(pattern) + 1
-
-  # Files containing spaces sometimes have a trailing tab
-  pattern2 = "+++ b/" + file + "\t\n"
-  if file_start.nil?
-    file_start = diff.index(pattern2) + 1
-  end
-
+  file_start = getStartIndexforFile file, diff
   count = 0
   lastIndex = 0
-
-  puts(file_start)
 
   diff.drop(file_start).each do |line| 
       if line.index("+++ b/")
@@ -41,13 +98,6 @@ def findLineOfDiffInFile(file, diff)
 end
 
 puts(findLineOfDiffInFile 'TestingTravis.xcodeproj/project.pbxproj', github.pr_diff.lines)
-
-
-
-
-
-
-
 # message = Violation.new("Podfile was edited, external dependencies might have been added", false, '.travis.yml', 13)
 
 # puts(message)
