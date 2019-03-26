@@ -12,5 +12,6 @@ class TestClass2{
     
     init(){
         let unusedVar2 = 0
+        //lelz
     }
 }

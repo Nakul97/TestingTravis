@@ -2,7 +2,7 @@
 xcode_summary.ignored_results { |result| 
 	#return false if the warning is not location specific
 	if !result.location
-		false
+		true
 		next
 	end
 	!(isResultInFilesArray(git.added_files, result) || isResultInFilesArray(git.modified_files, result))

@@ -19,6 +19,10 @@ class TestClass: NSObject {
         //testing code owners
         //test 2
         let unused = 0
+        
+        let unused2 = 0
+        
+        print(forceUnwrap2!)
     }
     
 }
