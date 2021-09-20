@@ -10,6 +10,7 @@ import Foundation
 
 class TestClass: NSObject {
     
+    //Test commit
     var forceUnwrapMe: String?
     var forceUnwrap2: Int?
     
